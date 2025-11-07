@@ -205,7 +205,7 @@ var SmtpMailAdapter = mailOptions => {
                         ? langOptions.btn
                         : defOptions.btn
 
-        let filePath = path.join("./", mailOptions.confirmTemplatePath);
+        let filePath = path.join(mailOptions.confirmTemplatePath);
         let template = eval('`' + fs.readFileSync(filePath).toString() + '`');
 
         var senderOptions = {
@@ -288,7 +288,7 @@ var SmtpMailAdapter = mailOptions => {
                         ? langOptions.btn
                         : defOptions.btn
 
-        let filePath = path.join("./", mailOptions.passwordTemplatePath);
+        let filePath = path.join(mailOptions.passwordTemplatePath);
         let template = eval('`' + fs.readFileSync(filePath).toString() + '`');
         
         var senderOptions = {
