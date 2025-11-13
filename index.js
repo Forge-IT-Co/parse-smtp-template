@@ -117,7 +117,7 @@ var SmtpMailAdapter = mailOptions => {
                         : confirmOptions.others || {};
 
         if (_templates) {
-            filePath = path.join("./", _templatePath);
+            filePath = path.join(_templatePath);
             template = eval('`' + fs.readFileSync(filePath).toString() + '`');
         } else {
             filePath = path.join(__dirname, "/templates/main.html");
